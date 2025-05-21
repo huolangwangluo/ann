@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html style="background: url(https://example.com/anime-bg.gif) fixed">
+<head>
+    <title>官机按钮生成器</title>
+    <!-- 新增字体和图标库 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 新增二次元风格CSS */
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(to right, #ffdde1, #ffa2b5);
+        }
+        
+        .container {
+            backdrop-filter: blur(5px);
+            border-radius: 25px;
+            padding: 2rem;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 30px rgba(255,105,180,0.3);
+        }
+
+        button {
+            border-radius: 15px !important;
+            background: linear-gradient(45deg, #ff79ad, #ffb3d9) !important;
+            border: 2px solid white !important;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 5px pink);
+        }
+
+        h1 {
+            color: #ff4d8a;
+            text-shadow: 2px 2px 0 white;
+            font-size: 2.5rem;
+        }
+        
+        /* 动态宠物元素 */
+        .waifu-avatar {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 200px;
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 新增动态宠物 -->
+    <img src="https://example.com/floating-waifu.gif" class="waifu-avatar" alt="动态助手">
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">✨官机按钮生成器🎀</h1>
+        
+        <!-- 原有结构改造 -->
+        <div class="main-workspace p-4 mb-4" style="border-radius:20px;border:3px dashed pink">
+            <!-- 原有功能按钮增加图标 -->
+                 </div>
+
+        <!-- 保留原有JS功能 -->
+        <script>
+            // 保留所有原始JavaScript功能代码
+            function addButtonRow() { /* 原有实现 */ }
+            function generateTemplate() { /* 原有实现 */ }
+        </script>
+</body>
+</html>
+<style>
+/* 动态背景图层 */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.gifer.com/2yDp.gif') repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+button {
+    border-radius: 35px!important;
+    background: linear-gradient(145deg, #ff89de 0%, #8985ff 100%);
+    box-shadow: 0 4px 20px rgba(255, 71, 195, 0.3);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: relative;
+    overflow: visible;
+}
+
+/* 按钮悬浮动态 */
+button:hover {
+    transform: translateY(-5px) rotate(-3deg);
+    box-shadow: 0 8px 30px rgba(137, 133, 255, 0.5);
+}
+
+button::after {
+    content: "♪";
+    position: absolute;
+    right: -20px;
+    top: -15px;
+    font-size: 24px;
+    color: #ffec47;
+    animation: bounce 1s infinite;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(1); }
+    100% { opacity: 1; transform: scale(2); }
+}
+
+/* 动态角色装饰 */
+.chibi-char {
+    position: fixed;
+    width: 180px;
+    transition: transform 0.3s;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#char-left {
+    left: -50px;
+    bottom: -30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+#char-right {
+    right: -50px;
+    bottom: 0;
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+</style>
+
+<!-- 动态装饰组件 -->
+<img src="//i.imgur.com/ZMhSGOE.gif" class="chibi-char" id="char-left">
+<img src="//i.imgur.com/Xixo9b8.gif" class="chibi-char" id="char-right">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+body {
+  font-family : 'Microsoft YaHei', sans-serif;
+  margin : 0;
+  padding : 0;
+  background-color : #F5F5F5;
+  height : 100vh;
+  overflow-x : hidden;
+}
+
+.container {
+  max-width : 100%;
+  width : 100%;
+  margin : 0 auto;
+  background-color : #FFFFFF;
+  padding : 20px;
+  border-radius : 0;
+  box-shadow : 0 2px 10px rgba(0, 0, 0, .1);
+  min-height : 100vh;
+  box-sizing : border-box;
+}
+
+.page-title {
+  text-align : center;
+  margin-bottom : 30px;
+  color : #333333;
+}
+
+.main-buttons {
+  display : flex;
+  gap : 10px;
+  margin : 20px 0;
+}
+
+.main-buttons button {
+  padding : 8px 16px;
+  border-radius : 4px;
+  cursor : pointer;
+  background-color : #1890FF;
+  color : white;
+  border : none;
+}
+
+.main-buttons button:hover {
+  background-color : #40A9FF;
+}
+
+.preview-container {
+  margin : 20px 0;
+}
+
+.button-rows-container {
+  display : flex;
+  flex-direction : column;
+  gap : 8px;
+  border : 1px solid #E8E8E8;
+  border-radius : 4px;
+  padding : 12px;
+  background-color : #FAFAFA;
+}
+
+.button-row-container {
+  display : flex;
+  align-items : center;
+  gap : 8px;
+  margin-bottom : 0;
+}
+
+.delete-row-button {
+  width : 24px;
+  height : 24px;
+  border-radius : 50%;
+  background-color : #F5F5F5;
+  border : 1px solid #D9D9D9;
+  color : #FF4D4F;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  cursor : pointer;
+  font-size : 16px;
+  line-height : 1;
+  flex-shrink : 0;
+}
+
+.delete-row-button:hover {
+  background-color : #FFF1F0;
+  border-color : #FF4D4F;
+}
+
+.button-row-wrapper {
+  flex : 1;
+}
+
+.button-row {
+  display : flex;
+  flex-wrap : wrap;
+  gap : 8px;
+  width : 100%;
+}
+
+.preview-button {
+  padding : 8px 16px;
+  border-radius : 4px;
+  cursor : pointer;
+  text-align : center;
+  font-size : 14px;
+  white-space : nowrap;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  flex : 1;
+  min-width : 80px;
+  box-sizing : border-box;
+  user-select : none;
+}
+
+.preview-button.dragging {
+  opacity : .5;
+  border : 2px dashed #1890FF;
+}
+
+.preview-button.over {
+  border : 2px dashed #40A9FF;
+  background-color : rgba(24, 144, 255, .1);
+}
+
+.add-button {
+  padding : 8px 16px;
+  border-radius : 4px;
+  cursor : pointer;
+  text-align : center;
+  font-size : 14px;
+  background-color : #F0F0F0;
+  color : #666666;
+  border : 1px dashed #D9D9D9;
+}
+
+.add-button:hover {
+  border-color : #40A9FF;
+  color : #40A9FF;
+}
+
+.style-0 {
+  border : 1px solid #D9D9D9;
+  background-color : #FFFFFF;
+  color : #333333;
+}
+
+.style-1 {
+  border : 1px solid #1890FF;
+  background-color : #FFFFFF;
+  color : #1890FF;
+}
+
+.style-3 {
+  border : 1px solid #FF4D4F;
+  background-color : #FFFFFF;
+  color : #FF4D4F;
+}
+
+.style-4 {
+  border : none;
+  background-color : #1890FF;
+  color : #FFFFFF;
+}
+
+.output-section {
+  margin-top : 30px;
+  padding : 15px;
+  border : 1px solid #E8E8E8;
+  border-radius : 4px;
+}
+
+.output-header {
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  margin-bottom : 15px;
+}
+
+#output {
+  background-color : #F5F5F5;
+  padding : 15px;
+  border-radius : 4px;
+  max-height : 300px;
+  overflow-y : auto;
+  white-space : pre-wrap;
+}
+
+.edit-dialog {
+  position : fixed;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  background-color : rgba(0, 0, 0, .5);
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  z-index : 1000;
+}
+
+.dialog-content {
+  background-color : white;
+  padding : 20px;
+  border-radius : 8px;
+  width : 400px;
+  max-width : 90%;
+  max-height : 90vh;
+  overflow-y : auto;
+}
+
+.form-group {
+  margin-bottom : 15px;
+}
+
+.form-group label {
+  display : block;
+  margin-bottom : 5px;
+  font-weight : bold;
+}
+
+.form-group input, .form-group select {
+  width : 100%;
+  padding : 8px;
+  border : 1px solid #D9D9D9;
+  border-radius : 4px;
+  box-sizing : border-box;
+}
+
+.dialog-buttons {
+  display : flex;
+  justify-content : flex-end;
+  gap : 10px;
+  margin-top : 20px;
+}
+
+.dialog-buttons button {
+  padding : 8px 16px;
+  border-radius : 4px;
+  cursor : pointer;
+}
+
+#cancel-button {
+  background-color : #F5F5F5;
+  border : 1px solid #D9D9D9;
+}
+
+#save-button {
+  background-color : #1890FF;
+  color : white;
+  border : none;
+}
+
+.action-button {
+  padding : 8px 16px;
+  border-radius : 4px;
+  cursor : pointer;
+  background-color : #1890FF;
+  color : white;
+  border : none;
+}
+
+.action-button:hover {
+  background-color : #40A9FF;
+}
+
+h2 {
+  margin-bottom : 10px;
+  display : flex;
+  align-items : center;
+  flex-wrap : wrap;
+}
+
+h2 button.action-button {
+  margin-left : 10px;
+  padding : 5px 12px;
+  border-radius : 4px;
+  cursor : pointer;
+  background-color : #1890FF;
+  color : white;
+  border : none;
+  font-size : 14px;
+  line-height : 1.5;
+  font-weight : normal;
+}
+
+h2 button.action-button:hover {
+  background-color : #40A9FF;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="workspaces-container" style="display: flex; gap: 20px;">
+            <div style="flex: 1;">
+                <div class="preview-container">
+                    <h2>
+                        主工作台
+                        <button onclick="addRow()" class="action-button">添加按钮行</button>
+                        <button onclick="generate()" class="action-button">生成模板</button>
+                        <button onclick="importTemplate()" class="action-button">导入模板</button>
+                    </h2>
+                    <div id="buttonRows" class="button-rows-container"></div>
+                </div>
+            </div>
+            
+            <div style="flex: 1;">
+                <div class="preview-container">
+                    <h2>
+                        副工作台
+                        <button onclick="importSecondaryTemplate()" class="action-button">导入模板</button>
+                    </h2>
+                    <div id="secondaryButtonRows" class="button-rows-container" style="background-color: #f0f8ff;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-header">
+                <h2>生成结果</h2>
+                <button id="copyButton" class="action-button" onclick="copyTemplate()">复制模板</button>
+            </div>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script>
+        let rowCount = 0;
+        let buttonConfigs = {};
+        let secondaryRowCount = 0;
+        let secondaryButtonConfigs = {};
+
+        // 添加按钮行
+        function addRow() {
+            if (rowCount >= 5) {
+                alert('最多支持5行按钮');
+                return;
+            }
+
+            const rowId = 'row-' + Date.now();
+            const row = document.createElement('div');
+            row.className = 'button-row-container';
+            row.id = rowId;
+
+            row.innerHTML = `
+                <button class="delete-row-button" onclick="deleteRow(this)" title="删除此行">×</button>
+                <div class="button-row-wrapper">
+                    <div class="button-row">
+                        <div class="add-button" onclick="addButtonToRow('${rowId}')">+ 添加按钮</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('buttonRows').appendChild(row);
+            rowCount++;
+
+            // 初始化此行的按钮配置存储
+            buttonConfigs[rowId] = [];
+        }
+
+        // 删除行
+        function deleteRow(button) {
+            const row = button.closest('.button-row-container');
+            const rowId = row.id;
+
+            // 删除行配置
+            delete buttonConfigs[rowId];
+
+            // 删除行元素
+            row.remove();
+
+            // 更新行计数
+            rowCount--;
+        }
+
+        // 向指定行添加按钮
+        function addButtonToRow(rowId) {
+            const row = document.getElementById(rowId);
+            const buttonRow = row.querySelector('.button-row');
+            const addButton = buttonRow.querySelector('.add-button');
+
+            // 检查按钮数量
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+            if (buttons.length >= 5) {
+                alert('每行最多支持5个按钮');
+                return;
+            }
+
+            // 创建新按钮配置
+            const buttonIndex = buttonConfigs[rowId].length;
+            const buttonConfig = {
+                id: buttonIndex + 1,
+                label: '按钮文字',
+                visited_label: '按钮文字',
+                type: 2, // 默认为指令类型
+                style: 0,
+                permission: 2,
+                data: '',
+                click_limit: 10,
+                unsupport_tips: '按钮文字',
+                at_bot_show_channel_list: true,
+                enter: true
+            };
+
+            // 存储按钮配置
+            buttonConfigs[rowId].push(buttonConfig);
+
+            // 创建预览按钮
+            const previewButton = document.createElement('div');
+            previewButton.className = 'preview-button style-0';
+            previewButton.textContent = '按钮文字';
+            previewButton.setAttribute('data-index', buttonIndex);
+            previewButton.onclick = function (e) {
+                // 如果是拖动结束，不打开编辑对话框
+                if (e.target.getAttribute('data-dragging') === 'true') {
+                    e.target.removeAttribute('data-dragging');
+                    return;
+                }
+                openEditDialog(rowId, buttonIndex);
+            };
+
+            // 添加拖放功能
+            previewButton.draggable = true;
+            previewButton.addEventListener('dragstart', handleDragStart);
+            previewButton.addEventListener('dragover', handleDragOver);
+            previewButton.addEventListener('dragenter', handleDragEnter);
+            previewButton.addEventListener('dragleave', handleDragLeave);
+            previewButton.addEventListener('drop', handleDrop);
+            previewButton.addEventListener('dragend', handleDragEnd);
+
+            // 插入到添加按钮之前
+            buttonRow.insertBefore(previewButton, addButton);
+
+            // 更新按钮宽度
+            updateButtonWidths(rowId);
+        }
+
+        // 拖放相关变量
+        let dragSrcEl = null;
+        let dragSrcRowId = null;
+
+        // 拖动开始
+        function handleDragStart(e) {
+            this.classList.add('dragging');
+
+            dragSrcEl = this;
+            dragSrcRowId = this.closest('.button-row-container').id;
+
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', this.innerHTML);
+
+            // 标记为正在拖动
+            this.setAttribute('data-dragging', 'true');
+        }
+
+        // 拖动经过
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        // 拖动进入
+        function handleDragEnter(e) {
+            this.classList.add('over');
+        }
+
+        // 拖动离开
+        function handleDragLeave(e) {
+            this.classList.remove('over');
+        }
+
+        // 放置
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 如果拖放到自己上面，不做任何操作
+            if (dragSrcEl === this) {
+                return false;
+            }
+
+            const targetRowId = this.closest('.button-row-container').id;
+            const srcIndex = parseInt(dragSrcEl.getAttribute('data-index'));
+            const targetIndex = parseInt(this.getAttribute('data-index'));
+
+            // 检查索引是否有效
+            if (isNaN(srcIndex) || isNaN(targetIndex) ||
+                !buttonConfigs[dragSrcRowId] || !buttonConfigs[targetRowId] ||
+                srcIndex < 0 || srcIndex >= buttonConfigs[dragSrcRowId].length ||
+                targetIndex < 0 || targetIndex >= buttonConfigs[targetRowId].length) {
+                console.error('无效的拖放索引:', dragSrcRowId, srcIndex, '->', targetRowId, targetIndex);
+                return false;
+            }
+
+            console.log('拖放操作:', dragSrcRowId, srcIndex, '->', targetRowId, targetIndex);
+
+            // 同一行内的按钮交换
+            if (dragSrcRowId === targetRowId) {
+                // 交换配置
+                const temp = { ...buttonConfigs[targetRowId][srcIndex] };
+                buttonConfigs[targetRowId][srcIndex] = { ...buttonConfigs[targetRowId][targetIndex] };
+                buttonConfigs[targetRowId][targetIndex] = temp;
+
+                // 更新行预览
+                updateRowPreview(targetRowId);
+            }
+            // 不同行之间的按钮交换
+            else {
+                // 检查目标行按钮数量
+                if (buttonConfigs[targetRowId].length >= 5) {
+                    alert('目标行已达到最大按钮数量(5个)');
+                    return false;
+                }
+
+                // 保存两个按钮的配置副本
+                const srcButtonConfig = { ...buttonConfigs[dragSrcRowId][srcIndex] };
+                const targetButtonConfig = { ...buttonConfigs[targetRowId][targetIndex] };
+
+                // 始终保留源按钮的副本，即使是唯一的按钮
+                buttonConfigs[targetRowId][targetIndex] = srcButtonConfig;
+                buttonConfigs[dragSrcRowId][srcIndex] = targetButtonConfig;
+
+                // 更新两行的预览
+                updateRowPreview(dragSrcRowId);
+                updateRowPreview(targetRowId);
+
+                // 更新按钮ID
+                updateButtonIds(dragSrcRowId);
+                updateButtonIds(targetRowId);
+            }
+
+            return false;
+        }
+
+        // 拖动结束
+        function handleDragEnd(e) {
+            // 移除所有拖动相关的类
+            document.querySelectorAll('.preview-button').forEach(button => {
+                button.classList.remove('dragging');
+                button.classList.remove('over');
+            });
+
+            // 清除拖动标记和拖动源
+            setTimeout(() => {
+                if (this) {
+                    this.removeAttribute('data-dragging');
+                }
+                dragSrcEl = null;
+                dragSrcRowId = null;
+            }, 100);
+        }
+
+        // 更新按钮宽度和文本显示
+        function updateButtonWidths(rowId) {
+            const row = document.getElementById(rowId);
+            const buttonRow = row.querySelector('.button-row');
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+
+            // 计算每个按钮的最大字符数
+            const totalButtons = buttons.length;
+            const maxCharsMap = {
+                1: 12, // 一个按钮最多12个字
+                2: 6,  // 两个按钮最多6个字
+                3: 4,  // 三个按钮最多4个字
+                4: 3,  // 四个按钮最多3个字
+                5: 2   // 五个按钮最多2个字
+            };
+            const maxChars = maxCharsMap[totalButtons] || 2;
+
+            // 更新每个按钮的文本显示
+            buttons.forEach((button, index) => {
+                const config = buttonConfigs[rowId][index];
+                if (config) {
+                    const originalText = config.label || '按钮文字';
+                    button.title = originalText; // 添加完整文本作为提示
+
+                    // 如果文本超过最大字符数，则截断并添加省略号
+                    if (originalText.length > maxChars) {
+                        button.textContent = originalText.substring(0, maxChars) + '...';
+                    } else {
+                        button.textContent = originalText;
+                    }
+                }
+            });
+        }
+
+        // 更新按钮ID
+        function updateButtonIds(rowId) {
+            const row = document.getElementById(rowId);
+            const buttons = row.querySelectorAll('.preview-button');
+
+            buttons.forEach((button, index) => {
+                button.setAttribute('data-index', index);
+                if (buttonConfigs[rowId][index]) {
+                    buttonConfigs[rowId][index].id = index + 1;
+                }
+            });
+
+            // 更新按钮宽度
+            updateButtonWidths(rowId);
+        }
+
+        // 打开编辑弹窗
+        function openEditDialog(rowId, buttonIndex) {
+            const config = buttonConfigs[rowId][buttonIndex];
+            if (!config) return;
+
+            // 创建弹窗
+            const dialog = document.createElement('div');
+            dialog.className = 'edit-dialog';
+
+            // 弹窗内容
+            dialog.innerHTML = `
+                <div class="dialog-content" style="width: 600px; max-width: 90%;">
+                    <h3>编辑按钮</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <div class="form-group" style="flex: 0 0 20%;">
+                            <label>按钮ID:</label>
+                            <input type="number" id="edit-id" value="${config.id}" readonly>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 35%;">
+                            <label>按钮文字:</label>
+                            <input type="text" id="edit-label" value="${config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 35%;">
+                            <label>点击后文字:</label>
+                            <input type="text" id="edit-visited-label" value="${config.visited_label || config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>按钮类型:</label>
+                            <select id="edit-type">
+                                <option value="0" ${config.type === 0 ? 'selected' : ''}>跳转</option>
+                                <option value="1" ${config.type === 1 ? 'selected' : ''}>回调</option>
+                                <option value="2" ${config.type === 2 ? 'selected' : ''}>指令</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 65%;" id="edit-options">
+                            ${config.type === 0 ? `
+                                <label>跳转链接:</label>
+                                <input type="url" id="edit-url" placeholder="http://" value="${config.data || ''}">
+                            ` : config.type === 1 ? `
+                                <label>回调数据:</label>
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">点击:</label>
+                                        <input type="text" id="edit-callback-click" placeholder="点击回调" value="${typeof config.data === 'object' ? config.data.click || '' : config.data || ''
+                    }">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">确认:</label>
+                                        <input type="text" id="edit-callback-confirm" placeholder="确认回调" value="${typeof config.data === 'object' ? config.data.confirm || '' : ''
+                    }">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">取消:</label>
+                                        <input type="text" id="edit-callback-cancel" placeholder="取消回调" value="${typeof config.data === 'object' ? config.data.cancel || '' : ''
+                    }">
+                                    </div>
+                                </div>
+                            ` : `
+                                <label>指令内容:</label>
+                                <input type="text" id="edit-command" placeholder="指令内容 (默认与按钮文字一致)" value="${config.data || ''}">
+                            `}
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>按钮样式:</label>
+                            <select id="edit-style">
+                                <option value="0" ${config.style === 0 ? 'selected' : ''}>灰色线框</option>
+                                <option value="1" ${config.style === 1 ? 'selected' : ''}>蓝色线框</option>
+                                <option value="3" ${config.style === 3 ? 'selected' : ''}>红色文字</option>
+                                <option value="4" ${config.style === 4 ? 'selected' : ''}>蓝色背景</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>权限类型:</label>
+                            <select id="edit-permission">
+                                <option value="0" ${config.permission === 0 ? 'selected' : ''}>指定用户</option>
+                                <option value="1" ${config.permission === 1 ? 'selected' : ''}>仅管理员</option>
+                                <option value="2" ${config.permission === 2 ? 'selected' : ''}>所有人</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>点击次数限制:</label>
+                            <input type="number" id="edit-click-limit" value="${config.click_limit || 10}" min="0">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 100%;">
+                            <label>不支持提示:</label>
+                            <input type="text" id="edit-unsupport-tips" value="${config.unsupport_tips || config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 45%; display: flex; align-items: center;">
+                            <input type="checkbox" id="edit-at-bot" ${config.at_bot_show_channel_list ? 'checked' : ''} style="margin-right: 8px; width: auto;">
+                            <label for="edit-at-bot" style="margin-bottom: 0;">显示频道列表</label>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 45%; display: flex; align-items: center;">
+                            <input type="checkbox" id="edit-enter" ${config.enter ? 'checked' : ''} style="margin-right: 8px; width: auto;">
+                            <label for="edit-enter" style="margin-bottom: 0;">自动发送</label>
+                        </div>
+                    </div>
+                    <div class="dialog-buttons" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <div>
+                            <button onclick="deleteButton('${rowId}', ${buttonIndex})" style="background-color: #ff4d4f; color: white; border: none;">删除按钮</button>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button id="cancel-button">取消</button>
+                            <button id="save-button">保存</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 添加弹窗到页面
+            document.body.appendChild(dialog);
+
+
+            // 类型变更事件
+            document.getElementById('edit-type').addEventListener('change', function () {
+                const type = parseInt(this.value);
+                const optionsDiv = document.getElementById('edit-options');
+
+                if (type === 0) {
+                    optionsDiv.innerHTML = `
+            <label>跳转链接:</label>
+            <input type="url" id="edit-url" placeholder="http://" value="${config.data || ''}">
+        `;
+                } else if (type === 1) {
+                    optionsDiv.innerHTML = `
+            <label>回调数据:</label>
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label style="font-size: 12px;">点击:</label>
+                    <input type="text" id="edit-callback-click" placeholder="点击回调" value="${typeof config.data === 'object' ? config.data.click || '' : config.data || ''
+                        }">
+                </div>
+                <div style="flex: 1;">
+                    <label style="font-size: 12px;">确认:</label>
+                    <input type="text" id="edit-callback-confirm" placeholder="确认回调" value="${typeof config.data === 'object' ? config.data.confirm || '' : ''
+                        }">
+                </div>
+                <div style="flex: 1;">
+                    <label style="font-size: 12px;">取消:</label>
+                    <input type="text" id="edit-callback-cancel" placeholder="取消回调" value="${typeof config.data === 'object' ? config.data.cancel || '' : ''
+                        }">
+                </div>
+            </div>
+        `;
+                } else {
+                    optionsDiv.innerHTML = `
+            <label>指令内容:</label>
+            <input type="text" id="edit-command" placeholder="指令内容 (默认与按钮文字一致)" value="${config.data || ''}">
+        `;
+                }
+            });
+
+            // 保存按钮事件
+            document.getElementById('save-button').addEventListener('click', function () {
+                const type = parseInt(document.getElementById('edit-type').value);
+
+                config.label = document.getElementById('edit-label').value || '按钮文字';
+                config.visited_label = document.getElementById('edit-visited-label').value || config.label;
+                config.type = type;
+                config.style = parseInt(document.getElementById('edit-style').value);
+                config.permission = parseInt(document.getElementById('edit-permission').value);
+                config.click_limit = parseInt(document.getElementById('edit-click-limit').value) || 10;
+                config.unsupport_tips = document.getElementById('edit-unsupport-tips').value || config.label;
+                config.at_bot_show_channel_list = document.getElementById('edit-at-bot').checked;
+                config.enter = document.getElementById('edit-enter').checked;
+
+                if (type === 0) {
+                    config.data = document.getElementById('edit-url').value || '';
+                } else if (type === 1) {
+                    config.data = {
+                        click: document.getElementById('edit-callback-click').value || '',
+                        confirm: document.getElementById('edit-callback-confirm').value || '',
+                        cancel: document.getElementById('edit-callback-cancel').value || ''
+                    };
+                } else {
+                    config.data = document.getElementById('edit-command').value || '';
+                }
+
+                // 更新预览
+                updateRowPreview(rowId);
+
+                // 关闭弹窗
+                dialog.remove();
+            });
+
+            // 取消按钮事件
+            document.getElementById('cancel-button').addEventListener('click', function () {
+                dialog.remove();
+            });
+        }
+
+        // 更新行预览 - 优化版本
+        function updateRowPreview(rowId) {
+            const row = document.getElementById(rowId);
+            if (!row) return;
+
+            const buttonRow = row.querySelector('.button-row');
+            if (!buttonRow) return;
+
+            const addButton = buttonRow.querySelector('.add-button');
+            if (!addButton) return;
+
+            // 清除现有按钮
+            buttonRow.querySelectorAll('.preview-button').forEach(btn => btn.remove());
+
+            // 检查按钮配置是否存在
+            if (!buttonConfigs[rowId] || !Array.isArray(buttonConfigs[rowId])) {
+                console.error('按钮配置不存在:', rowId);
+                buttonConfigs[rowId] = [];
+                return;
+            }
+
+            // 重新创建按钮
+            buttonConfigs[rowId].forEach((config, index) => {
+                if (!config) {
+                    console.error('按钮配置为空:', rowId, index);
+                    return;
+                }
+
+                const previewButton = document.createElement('div');
+                previewButton.className = `preview-button style-${config.style || 0}`;
+                previewButton.textContent = config.label || '按钮文字';
+                previewButton.setAttribute('data-index', index);
+                previewButton.onclick = function (e) {
+                    if (e.target.getAttribute('data-dragging') === 'true') {
+                        e.target.removeAttribute('data-dragging');
+                        return;
+                    }
+                    openEditDialog(rowId, index);
+                };
+
+                // 添加拖放功能
+                previewButton.draggable = true;
+                previewButton.addEventListener('dragstart', handleDragStart);
+                previewButton.addEventListener('dragover', handleDragOver);
+                previewButton.addEventListener('dragenter', handleDragEnter);
+                previewButton.addEventListener('dragleave', handleDragLeave);
+                previewButton.addEventListener('drop', handleDrop);
+                previewButton.addEventListener('dragend', handleDragEnd);
+
+                // 插入到添加按钮之前
+                buttonRow.insertBefore(previewButton, addButton);
+            });
+
+            // 更新按钮宽度
+            updateButtonWidths(rowId);
+        }
+
+        // 删除按钮
+        function deleteButton(rowId, buttonIndex) {
+            const row = document.getElementById(rowId);
+            if (!row) return;
+
+            // 移除按钮配置
+            buttonConfigs[rowId].splice(buttonIndex, 1);
+
+            // 移除预览按钮
+            const buttonRow = row.querySelector('.button-row');
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+            if (buttons[buttonIndex]) {
+                buttons[buttonIndex].remove();
+            }
+
+            // 更新按钮ID
+            updateButtonIds(rowId);
+
+            // 关闭弹窗
+            document.querySelector('.edit-dialog')?.remove();
+        }
+
+        // 生成模板
+        function generate() {
+            if (rowCount === 0) {
+                alert('请至少添加一行按钮');
+                return;
+            }
+
+            const template = {
+                rows: []
+            };
+
+            let buttonIdCounter = 1;
+
+            document.querySelectorAll('.button-row-container').forEach(row => {
+                const rowId = row.id;
+
+                if (!buttonConfigs[rowId] || buttonConfigs[rowId].length === 0) {
+                    return;
+                }
+
+                const rowData = {
+                    buttons: []
+                };
+
+                buttonConfigs[rowId].forEach(config => {
+                    const button = {
+                        id: buttonIdCounter.toString(),
+                        render_data: {
+                            label: config.label,
+                            visited_label: config.visited_label || config.label
+                        },
+                        action: {
+                            type: config.type,
+                            permission: {
+                                type: config.permission,
+                                specify_role_ids: ["1", "2", "3"]
+                            },
+                            click_limit: config.click_limit || 10,
+                            unsupport_tips: config.unsupport_tips || config.label,
+                            data: config.data || (config.type === 2 ? `/${config.label}` : ''),
+                            at_bot_show_channel_list: config.at_bot_show_channel_list !== undefined ? config.at_bot_show_channel_list : true,
+                            enter: config.enter !== undefined ? config.enter : true
+                        }
+                    };
+
+                    rowData.buttons.push(button);
+                    buttonIdCounter++;
+                });
+
+                template.rows.push(rowData);
+            });
+
+            document.getElementById('output').textContent = JSON.stringify(template, null, 2);
+        }
+
+        // 复制模板
+        function copyTemplate() {
+            const output = document.getElementById('output').textContent;
+            if (!output) {
+                alert('请先生成模板');
+                return;
+            }
+
+            navigator.clipboard.writeText(output)
+                .then(() => alert('模板已复制到剪贴板'))
+                .catch(err => alert('复制失败: ' + err));
+        }
+
+        // 导入模板
+        function importTemplate() {
+            // 创建弹窗
+            const dialog = document.createElement('div');
+            dialog.className = 'edit-dialog';
+
+            // 弹窗内容
+            dialog.innerHTML = `
+                <div class="dialog-content">
+                    <h3>导入按钮模板</h3>
+                    <div class="form-group">
+                        <label>请粘贴JSON模板:</label>
+                        <textarea id="import-json" rows="10" style="width: 100%; padding: 8px; border: 1px solid #D9D9D9; border-radius: 4px; box-sizing: border-box;"></textarea>
+                    </div>
+                    <div class="dialog-buttons">
+                        <button id="cancel-import">取消</button>
+                        <button id="confirm-import">导入</button>
+                    </div>
+                </div>
+            `;
+
+            // 添加弹窗到页面
+            document.body.appendChild(dialog);
+
+            // 取消按钮事件
+            document.getElementById('cancel-import').addEventListener('click', function () {
+                dialog.remove();
+            });
+
+            // 确认导入按钮事件
+            document.getElementById('confirm-import').addEventListener('click', function () {
+                const jsonText = document.getElementById('import-json').value;
+                if (!jsonText) {
+                    alert('请输入JSON模板');
+                    return;
+                }
+
+                try {
+                    const template = JSON.parse(jsonText);
+
+                    // 清空现有按钮
+                    document.getElementById('buttonRows').innerHTML = '';
+                    buttonConfigs = {};
+                    rowCount = 0;
+
+                    // 导入模板
+                    if (template.rows && Array.isArray(template.rows)) {
+                        template.rows.forEach(row => {
+                            if (row.buttons && Array.isArray(row.buttons)) {
+                                // 创建新行
+                                const rowId = 'row-' + Date.now() + Math.floor(Math.random() * 1000);
+                                const rowElement = document.createElement('div');
+                                rowElement.className = 'button-row-container';
+                                rowElement.id = rowId;
+
+                                rowElement.innerHTML = `
+                                    <button class="delete-row-button" onclick="deleteRow(this)" title="删除此行">×</button>
+                                    <div class="button-row-wrapper">
+                                        <div class="button-row">
+                                            <div class="add-button" onclick="addButtonToRow('${rowId}')">+ 添加按钮</div>
+                                        </div>
+                                    </div>
+                                `;
+
+                                document.getElementById('buttonRows').appendChild(rowElement);
+                                rowCount++;
+
+                                // 初始化此行的按钮配置存储
+                                buttonConfigs[rowId] = [];
+
+                                // 添加按钮
+                                row.buttons.forEach(button => {
+                                    // 尝试从JSON中推断样式
+                                    // 可以通过标签或其他属性判断样式
+                                    let inferredStyle = 0; // 默认样式
+                                    
+                                    // 根据标签判断样式
+                                    const label = button.render_data?.label || '';
+                                    if (button.render_data?.style !== undefined) {
+                                        // 如果模板中明确包含样式信息
+                                        inferredStyle = parseInt(button.render_data.style);
+                                    } else {
+                                        // 根据其他属性推断样式
+                                        const actionType = button.action?.type;
+                                        if (actionType === 0) { // 跳转类型通常使用蓝色线框
+                                            inferredStyle = 1;
+                                        } else if (actionType === 1) { // 回调类型
+                                            inferredStyle = 4; // 蓝色背景
+                                        }
+                                        // 如果标签中包含某些关键词，可能是警告/危险按钮
+                                        if (label.includes('删除') || label.includes('取消') || 
+                                            label.includes('退出') || label.includes('关闭')) {
+                                            inferredStyle = 3; // 红色文字
+                                        }
+                                    }
+
+                                    const buttonConfig = {
+                                        id: parseInt(button.id) || buttonConfigs[rowId].length + 1,
+                                        label: button.render_data?.label || '按钮文字',
+                                        visited_label: button.render_data?.visited_label || button.render_data?.label || '按钮文字',
+                                        type: button.action?.type !== undefined ? parseInt(button.action.type) : 2,
+                                        style: inferredStyle, // 使用推断的样式而不是硬编码为0
+                                        permission: button.action?.permission?.type !== undefined ? parseInt(button.action.permission.type) : 2,
+                                        data: button.action?.type === 1 ?
+                                            (typeof button.action.data === 'object' ?
+                                                button.action.data :
+                                                { click: button.action?.data || '', confirm: '', cancel: '' }) :
+                                            button.action?.data || '',
+                                        click_limit: button.action?.click_limit || 10,
+                                        unsupport_tips: button.action?.unsupport_tips || button.render_data?.label || '按钮文字',
+                                        at_bot_show_channel_list: button.action?.at_bot_show_channel_list !== undefined ? button.action.at_bot_show_channel_list : true,
+                                        enter: button.action?.enter !== undefined ? button.action.enter : true
+                                    };
+
+                                    // 存储按钮配置
+                                    buttonConfigs[rowId].push(buttonConfig);
+                                });
+
+                                // 更新行预览
+                                updateRowPreview(rowId);
+                            }
+                        });
+                    }
+
+                    // 关闭弹窗
+                    dialog.remove();
+
+                    // 生成预览
+                    generate();
+
+                } catch (error) {
+                    alert('JSON格式错误: ' + error.message);
+                }
+            });
+        }
+
+        // 添加行到副工作台
+        function addSecondaryRow() {
+            if (secondaryRowCount >= 5) {
+                alert('副工作台最多支持5行按钮');
+                return;
+            }
+
+            const rowId = 'secondary-row-' + Date.now();
+            const row = document.createElement('div');
+            row.className = 'button-row-container';
+            row.id = rowId;
+
+            row.innerHTML = `
+                <button class="delete-row-button" onclick="deleteSecondaryRow(this)" title="删除此行">×</button>
+                <div class="button-row-wrapper">
+                    <div class="button-row">
+                        <div class="add-button" onclick="addButtonToSecondaryRow('${rowId}')">+ 添加按钮</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('secondaryButtonRows').appendChild(row);
+            secondaryRowCount++;
+
+            // 初始化此行的按钮配置存储
+            secondaryButtonConfigs[rowId] = [];
+        }
+        
+        // 删除副工作台的行
+        function deleteSecondaryRow(button) {
+            const row = button.closest('.button-row-container');
+            const rowId = row.id;
+
+            // 删除行配置
+            delete secondaryButtonConfigs[rowId];
+
+            // 删除行元素
+            row.remove();
+
+            // 更新行计数
+            secondaryRowCount--;
+        }
+        
+        // 向副工作台的指定行添加按钮
+        function addButtonToSecondaryRow(rowId) {
+            const row = document.getElementById(rowId);
+            const buttonRow = row.querySelector('.button-row');
+            const addButton = buttonRow.querySelector('.add-button');
+
+            // 检查按钮数量
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+            if (buttons.length >= 5) {
+                alert('每行最多支持5个按钮');
+                return;
+            }
+
+            // 创建新按钮配置
+            const buttonIndex = secondaryButtonConfigs[rowId].length;
+            const buttonConfig = {
+                id: buttonIndex + 1,
+                label: '按钮文字',
+                visited_label: '按钮文字',
+                type: 2,
+                style: 0,
+                permission: 2,
+                data: '',
+                click_limit: 10,
+                unsupport_tips: '按钮文字',
+                at_bot_show_channel_list: true,
+                enter: true
+            };
+
+            // 存储按钮配置
+            secondaryButtonConfigs[rowId].push(buttonConfig);
+
+            // 创建预览按钮
+            const previewButton = document.createElement('div');
+            previewButton.className = 'preview-button style-0';
+            previewButton.textContent = '按钮文字';
+            previewButton.setAttribute('data-index', buttonIndex);
+            previewButton.setAttribute('data-secondary', 'true');
+            previewButton.onclick = function (e) {
+                // 如果是拖动结束，不打开编辑对话框
+                if (e.target.getAttribute('data-dragging') === 'true') {
+                    e.target.removeAttribute('data-dragging');
+                    return;
+                }
+                openSecondaryEditDialog(rowId, buttonIndex);
+            };
+
+            // 添加拖放功能
+            previewButton.draggable = true;
+            previewButton.addEventListener('dragstart', handleDragStart);
+            previewButton.addEventListener('dragover', handleDragOver);
+            previewButton.addEventListener('dragenter', handleDragEnter);
+            previewButton.addEventListener('dragleave', handleDragLeave);
+            previewButton.addEventListener('drop', handleDrop);
+            previewButton.addEventListener('dragend', handleDragEnd);
+
+            // 插入到添加按钮之前
+            buttonRow.insertBefore(previewButton, addButton);
+
+            // 更新按钮宽度
+            updateSecondaryButtonWidths(rowId);
+        }
+        
+        // 更新副工作台按钮宽度和文本显示
+        function updateSecondaryButtonWidths(rowId) {
+            const row = document.getElementById(rowId);
+            const buttonRow = row.querySelector('.button-row');
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+
+            // 计算每个按钮的最大字符数
+            const totalButtons = buttons.length;
+            const maxCharsMap = {
+                1: 12,
+                2: 6,
+                3: 4,
+                4: 3,
+                5: 2
+            };
+            const maxChars = maxCharsMap[totalButtons] || 2;
+
+            // 更新每个按钮的文本显示
+            buttons.forEach((button, index) => {
+                const config = secondaryButtonConfigs[rowId][index];
+                if (config) {
+                    const originalText = config.label || '按钮文字';
+                    button.title = originalText;
+
+                    if (originalText.length > maxChars) {
+                        button.textContent = originalText.substring(0, maxChars) + '...';
+                    } else {
+                        button.textContent = originalText;
+                    }
+                }
+            });
+        }
+        
+        // 更新副工作台按钮ID
+        function updateSecondaryButtonIds(rowId) {
+            const row = document.getElementById(rowId);
+            const buttons = row.querySelectorAll('.preview-button');
+
+            buttons.forEach((button, index) => {
+                button.setAttribute('data-index', index);
+                if (secondaryButtonConfigs[rowId][index]) {
+                    secondaryButtonConfigs[rowId][index].id = index + 1;
+                }
+            });
+
+            updateSecondaryButtonWidths(rowId);
+        }
+        
+        // 打开副工作台编辑弹窗
+        function openSecondaryEditDialog(rowId, buttonIndex) {
+            const config = secondaryButtonConfigs[rowId][buttonIndex];
+            if (!config) return;
+            
+            // 弹窗内容和逻辑与主工作台相同，只需替换相关变量
+            // 创建弹窗
+            const dialog = document.createElement('div');
+            dialog.className = 'edit-dialog';
+
+            // 弹窗内容
+            dialog.innerHTML = `
+                <div class="dialog-content" style="width: 600px; max-width: 90%;">
+                    <h3>编辑按钮</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <div class="form-group" style="flex: 0 0 20%;">
+                            <label>按钮ID:</label>
+                            <input type="number" id="edit-id" value="${config.id}" readonly>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 35%;">
+                            <label>按钮文字:</label>
+                            <input type="text" id="edit-label" value="${config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 35%;">
+                            <label>点击后文字:</label>
+                            <input type="text" id="edit-visited-label" value="${config.visited_label || config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>按钮类型:</label>
+                            <select id="edit-type">
+                                <option value="0" ${config.type === 0 ? 'selected' : ''}>跳转</option>
+                                <option value="1" ${config.type === 1 ? 'selected' : ''}>回调</option>
+                                <option value="2" ${config.type === 2 ? 'selected' : ''}>指令</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 65%;" id="edit-options">
+                            ${config.type === 0 ? `
+                                <label>跳转链接:</label>
+                                <input type="url" id="edit-url" placeholder="http://" value="${config.data || ''}">
+                            ` : config.type === 1 ? `
+                                <label>回调数据:</label>
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">点击:</label>
+                                        <input type="text" id="edit-callback-click" placeholder="点击回调" value="${typeof config.data === 'object' ? config.data.click || '' : config.data || ''}">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">确认:</label>
+                                        <input type="text" id="edit-callback-confirm" placeholder="确认回调" value="${typeof config.data === 'object' ? config.data.confirm || '' : ''}">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label style="font-size: 12px;">取消:</label>
+                                        <input type="text" id="edit-callback-cancel" placeholder="取消回调" value="${typeof config.data === 'object' ? config.data.cancel || '' : ''}">
+                                    </div>
+                                </div>
+                            ` : `
+                                <label>指令内容:</label>
+                                <input type="text" id="edit-command" placeholder="指令内容 (默认与按钮文字一致)" value="${config.data || ''}">
+                            `}
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>按钮样式:</label>
+                            <select id="edit-style">
+                                <option value="0" ${config.style === 0 ? 'selected' : ''}>灰色线框</option>
+                                <option value="1" ${config.style === 1 ? 'selected' : ''}>蓝色线框</option>
+                                <option value="3" ${config.style === 3 ? 'selected' : ''}>红色文字</option>
+                                <option value="4" ${config.style === 4 ? 'selected' : ''}>蓝色背景</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>权限类型:</label>
+                            <select id="edit-permission">
+                                <option value="0" ${config.permission === 0 ? 'selected' : ''}>指定用户</option>
+                                <option value="1" ${config.permission === 1 ? 'selected' : ''}>仅管理员</option>
+                                <option value="2" ${config.permission === 2 ? 'selected' : ''}>所有人</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label>点击次数限制:</label>
+                            <input type="number" id="edit-click-limit" value="${config.click_limit || 10}" min="0">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 100%;">
+                            <label>不支持提示:</label>
+                            <input type="text" id="edit-unsupport-tips" value="${config.unsupport_tips || config.label}">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 45%; display: flex; align-items: center;">
+                            <input type="checkbox" id="edit-at-bot" ${config.at_bot_show_channel_list ? 'checked' : ''} style="margin-right: 8px; width: auto;">
+                            <label for="edit-at-bot" style="margin-bottom: 0;">显示频道列表</label>
+                        </div>
+                        <div class="form-group" style="flex: 0 0 45%; display: flex; align-items: center;">
+                            <input type="checkbox" id="edit-enter" ${config.enter ? 'checked' : ''} style="margin-right: 8px; width: auto;">
+                            <label for="edit-enter" style="margin-bottom: 0;">自动发送</label>
+                        </div>
+                    </div>
+                    <div class="dialog-buttons" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <div>
+                            <button onclick="deleteSecondaryButton('${rowId}', ${buttonIndex})" style="background-color: #ff4d4f; color: white; border: none;">删除按钮</button>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button id="cancel-button">取消</button>
+                            <button id="save-button">保存</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 添加弹窗到页面
+            document.body.appendChild(dialog);
+
+            // 类型变更事件
+            document.getElementById('edit-type').addEventListener('change', function () {
+                const type = parseInt(this.value);
+                const optionsDiv = document.getElementById('edit-options');
+
+                if (type === 0) {
+                    optionsDiv.innerHTML = `
+                        <label>跳转链接:</label>
+                        <input type="url" id="edit-url" placeholder="http://" value="${config.data || ''}">
+                    `;
+                } else if (type === 1) {
+                    optionsDiv.innerHTML = `
+                        <label>回调数据:</label>
+                        <div style="display: flex; gap: 10px;">
+                            <div style="flex: 1;">
+                                <label style="font-size: 12px;">点击:</label>
+                                <input type="text" id="edit-callback-click" placeholder="点击回调" value="${typeof config.data === 'object' ? config.data.click || '' : config.data || ''}">
+                            </div>
+                            <div style="flex: 1;">
+                                <label style="font-size: 12px;">确认:</label>
+                                <input type="text" id="edit-callback-confirm" placeholder="确认回调" value="${typeof config.data === 'object' ? config.data.confirm || '' : ''}">
+                            </div>
+                            <div style="flex: 1;">
+                                <label style="font-size: 12px;">取消:</label>
+                                <input type="text" id="edit-callback-cancel" placeholder="取消回调" value="${typeof config.data === 'object' ? config.data.cancel || '' : ''}">
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    optionsDiv.innerHTML = `
+                        <label>指令内容:</label>
+                        <input type="text" id="edit-command" placeholder="指令内容 (默认与按钮文字一致)" value="${config.data || ''}">
+                    `;
+                }
+            });
+
+            // 保存按钮事件
+            document.getElementById('save-button').addEventListener('click', function () {
+                const type = parseInt(document.getElementById('edit-type').value);
+
+                config.label = document.getElementById('edit-label').value || '按钮文字';
+                config.visited_label = document.getElementById('edit-visited-label').value || config.label;
+                config.type = type;
+                config.style = parseInt(document.getElementById('edit-style').value);
+                config.permission = parseInt(document.getElementById('edit-permission').value);
+                config.click_limit = parseInt(document.getElementById('edit-click-limit').value) || 10;
+                config.unsupport_tips = document.getElementById('edit-unsupport-tips').value || config.label;
+                config.at_bot_show_channel_list = document.getElementById('edit-at-bot').checked;
+                config.enter = document.getElementById('edit-enter').checked;
+
+                if (type === 0) {
+                    config.data = document.getElementById('edit-url').value || '';
+                } else if (type === 1) {
+                    config.data = {
+                        click: document.getElementById('edit-callback-click').value || '',
+                        confirm: document.getElementById('edit-callback-confirm').value || '',
+                        cancel: document.getElementById('edit-callback-cancel').value || ''
+                    };
+                } else {
+                    config.data = document.getElementById('edit-command').value || '';
+                }
+
+                // 更新预览
+                updateSecondaryRowPreview(rowId);
+
+                // 关闭弹窗
+                dialog.remove();
+            });
+
+            // 取消按钮事件
+            document.getElementById('cancel-button').addEventListener('click', function () {
+                dialog.remove();
+            });
+        }
+        
+        // 删除副工作台按钮
+        function deleteSecondaryButton(rowId, buttonIndex) {
+            const row = document.getElementById(rowId);
+            if (!row) return;
+
+            // 移除按钮配置
+            secondaryButtonConfigs[rowId].splice(buttonIndex, 1);
+
+            // 移除预览按钮
+            const buttonRow = row.querySelector('.button-row');
+            const buttons = buttonRow.querySelectorAll('.preview-button');
+            if (buttons[buttonIndex]) {
+                buttons[buttonIndex].remove();
+            }
+
+            // 更新按钮ID
+            updateSecondaryButtonIds(rowId);
+
+            // 关闭弹窗
+            document.querySelector('.edit-dialog')?.remove();
+        }
+        
+        // 更新副工作台行预览
+        function updateSecondaryRowPreview(rowId) {
+            const row = document.getElementById(rowId);
+            if (!row) return;
+
+            const buttonRow = row.querySelector('.button-row');
+            if (!buttonRow) return;
+
+            const addButton = buttonRow.querySelector('.add-button');
+            if (!addButton) return;
+
+            // 清除现有按钮
+            buttonRow.querySelectorAll('.preview-button').forEach(btn => btn.remove());
+
+            // 检查按钮配置是否存在
+            if (!secondaryButtonConfigs[rowId] || !Array.isArray(secondaryButtonConfigs[rowId])) {
+                console.error('副工作台按钮配置不存在:', rowId);
+                secondaryButtonConfigs[rowId] = [];
+                return;
+            }
+
+            // 重新创建按钮
+            secondaryButtonConfigs[rowId].forEach((config, index) => {
+                if (!config) {
+                    console.error('副工作台按钮配置为空:', rowId, index);
+                    return;
+                }
+
+                const previewButton = document.createElement('div');
+                previewButton.className = `preview-button style-${config.style || 0}`;
+                previewButton.textContent = config.label || '按钮文字';
+                previewButton.setAttribute('data-index', index);
+                previewButton.setAttribute('data-secondary', 'true');
+                previewButton.onclick = function (e) {
+                    if (e.target.getAttribute('data-dragging') === 'true') {
+                        e.target.removeAttribute('data-dragging');
+                        return;
+                    }
+                    openSecondaryEditDialog(rowId, index);
+                };
+
+                // 添加拖放功能
+                previewButton.draggable = true;
+                previewButton.addEventListener('dragstart', handleDragStart);
+                previewButton.addEventListener('dragover', handleDragOver);
+                previewButton.addEventListener('dragenter', handleDragEnter);
+                previewButton.addEventListener('dragleave', handleDragLeave);
+                previewButton.addEventListener('drop', handleDrop);
+                previewButton.addEventListener('dragend', handleDragEnd);
+
+                // 插入到添加按钮之前
+                buttonRow.insertBefore(previewButton, addButton);
+            });
+
+            // 更新按钮宽度
+            updateSecondaryButtonWidths(rowId);
+        }
+        
+        // 导入模板到副工作台
+        function importSecondaryTemplate() {
+            // 创建弹窗
+            const dialog = document.createElement('div');
+            dialog.className = 'edit-dialog';
+
+            // 弹窗内容
+            dialog.innerHTML = `
+                <div class="dialog-content">
+                    <h3>导入按钮模板到副工作台</h3>
+                    <div class="form-group">
+                        <label>请粘贴JSON模板:</label>
+                        <textarea id="import-json" rows="10" style="width: 100%; padding: 8px; border: 1px solid #D9D9D9; border-radius: 4px; box-sizing: border-box;"></textarea>
+                    </div>
+                    <div class="dialog-buttons">
+                        <button id="cancel-import">取消</button>
+                        <button id="confirm-import">导入</button>
+                    </div>
+                </div>
+            `;
+
+            // 添加弹窗到页面
+            document.body.appendChild(dialog);
+
+            // 取消按钮事件
+            document.getElementById('cancel-import').addEventListener('click', function () {
+                dialog.remove();
+            });
+
+            // 确认导入按钮事件
+            document.getElementById('confirm-import').addEventListener('click', function () {
+                const jsonText = document.getElementById('import-json').value;
+                if (!jsonText) {
+                    alert('请输入JSON模板');
+                    return;
+                }
+
+                try {
+                    const template = JSON.parse(jsonText);
+
+                    // 清空副工作台现有按钮
+                    document.getElementById('secondaryButtonRows').innerHTML = '';
+                    secondaryButtonConfigs = {};
+                    secondaryRowCount = 0;
+
+                    // 导入模板到副工作台
+                    if (template.rows && Array.isArray(template.rows)) {
+                        template.rows.forEach(row => {
+                            if (row.buttons && Array.isArray(row.buttons)) {
+                                // 创建新行
+                                const rowId = 'secondary-row-' + Date.now() + Math.floor(Math.random() * 1000);
+                                const rowElement = document.createElement('div');
+                                rowElement.className = 'button-row-container';
+                                rowElement.id = rowId;
+
+                                rowElement.innerHTML = `
+                                    <button class="delete-row-button" onclick="deleteSecondaryRow(this)" title="删除此行">×</button>
+                                    <div class="button-row-wrapper">
+                                        <div class="button-row">
+                                            <div class="add-button" onclick="addButtonToSecondaryRow('${rowId}')">+ 添加按钮</div>
+                                        </div>
+                                    </div>
+                                `;
+
+                                document.getElementById('secondaryButtonRows').appendChild(rowElement);
+                                secondaryRowCount++;
+
+                                // 初始化此行的按钮配置存储
+                                secondaryButtonConfigs[rowId] = [];
+
+                                // 添加按钮
+                                row.buttons.forEach(button => {
+                                    // 尝试从JSON中推断样式
+                                    let inferredStyle = 0;
+                                    
+                                    // 根据标签判断样式
+                                    const label = button.render_data?.label || '';
+                                    if (button.render_data?.style !== undefined) {
+                                        inferredStyle = parseInt(button.render_data.style);
+                                    } else {
+                                        const actionType = button.action?.type;
+                                        if (actionType === 0) {
+                                            inferredStyle = 1;
+                                        } else if (actionType === 1) {
+                                            inferredStyle = 4;
+                                        }
+                                        if (label.includes('删除') || label.includes('取消') || 
+                                            label.includes('退出') || label.includes('关闭')) {
+                                            inferredStyle = 3;
+                                        }
+                                    }
+
+                                    const buttonConfig = {
+                                        id: parseInt(button.id) || secondaryButtonConfigs[rowId].length + 1,
+                                        label: button.render_data?.label || '按钮文字',
+                                        visited_label: button.render_data?.visited_label || button.render_data?.label || '按钮文字',
+                                        type: button.action?.type !== undefined ? parseInt(button.action.type) : 2,
+                                        style: inferredStyle,
+                                        permission: button.action?.permission?.type !== undefined ? parseInt(button.action.permission.type) : 2,
+                                        data: button.action?.type === 1 ?
+                                            (typeof button.action.data === 'object' ?
+                                                button.action.data :
+                                                { click: button.action?.data || '', confirm: '', cancel: '' }) :
+                                            button.action?.data || '',
+                                        click_limit: button.action?.click_limit || 10,
+                                        unsupport_tips: button.action?.unsupport_tips || button.render_data?.label || '按钮文字',
+                                        at_bot_show_channel_list: button.action?.at_bot_show_channel_list !== undefined ? button.action.at_bot_show_channel_list : true,
+                                        enter: button.action?.enter !== undefined ? button.action.enter : true
+                                    };
+
+                                    // 存储按钮配置
+                                    secondaryButtonConfigs[rowId].push(buttonConfig);
+                                });
+
+                                // 更新行预览
+                                updateSecondaryRowPreview(rowId);
+                            }
+                        });
+                    }
+
+                    // 关闭弹窗
+                    dialog.remove();
+
+                } catch (error) {
+                    alert('JSON格式错误: ' + error.message);
+                }
+            });
+        }
+        
+        // 修改拖放处理函数支持跨工作台拖放
+        // 拖动开始
+        function handleDragStart(e) {
+            this.classList.add('dragging');
+
+            dragSrcEl = this;
+            dragSrcRowId = this.closest('.button-row-container').id;
+            dragSrcIsSecondary = this.hasAttribute('data-secondary');
+
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', this.innerHTML);
+            e.dataTransfer.setData('application/json', JSON.stringify({
+                rowId: dragSrcRowId,
+                isSecondary: dragSrcIsSecondary,
+                index: this.getAttribute('data-index')
+            }));
+
+            // 标记为正在拖动
+            this.setAttribute('data-dragging', 'true');
+        }
+        
+        // 放置处理
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 如果拖放到自己上面，不做任何操作
+            if (dragSrcEl === this) {
+                return false;
+            }
+
+            const targetRowId = this.closest('.button-row-container').id;
+            const targetIsSecondary = this.hasAttribute('data-secondary');
+            const srcIndex = parseInt(dragSrcEl.getAttribute('data-index'));
+            const targetIndex = parseInt(this.getAttribute('data-index'));
+            
+            // 获取源按钮和目标按钮的配置集合
+            const srcConfigs = dragSrcIsSecondary ? secondaryButtonConfigs : buttonConfigs;
+            const targetConfigs = targetIsSecondary ? secondaryButtonConfigs : buttonConfigs;
+
+            // 检查索引是否有效
+            if (isNaN(srcIndex) || isNaN(targetIndex) ||
+                !srcConfigs[dragSrcRowId] || !targetConfigs[targetRowId] ||
+                srcIndex < 0 || srcIndex >= srcConfigs[dragSrcRowId].length ||
+                targetIndex < 0 || targetIndex >= targetConfigs[targetRowId].length) {
+                console.error('无效的拖放索引:', dragSrcRowId, srcIndex, '->', targetRowId, targetIndex);
+                return false;
+            }
+
+            console.log('拖放操作:', 
+                (dragSrcIsSecondary ? '副' : '主') + dragSrcRowId, srcIndex, 
+                '->',
+                (targetIsSecondary ? '副' : '主') + targetRowId, targetIndex);
+
+            // 同一工作台同一行内的按钮交换
+            if (dragSrcRowId === targetRowId && dragSrcIsSecondary === targetIsSecondary) {
+                // 交换配置
+                const temp = { ...srcConfigs[targetRowId][srcIndex] };
+                srcConfigs[targetRowId][srcIndex] = { ...targetConfigs[targetRowId][targetIndex] };
+                targetConfigs[targetRowId][targetIndex] = temp;
+
+                // 更新行预览
+                if (targetIsSecondary) {
+                    updateSecondaryRowPreview(targetRowId);
+                } else {
+                    updateRowPreview(targetRowId);
+                }
+            }
+            // 不同行或不同工作台之间的按钮交换
+            else {
+                // 检查目标行按钮数量
+                if (targetConfigs[targetRowId].length >= 5) {
+                    alert('目标行已达到最大按钮数量(5个)');
+                    return false;
+                }
+
+                // 保存两个按钮的配置副本
+                const srcButtonConfig = { ...srcConfigs[dragSrcRowId][srcIndex] };
+                const targetButtonConfig = { ...targetConfigs[targetRowId][targetIndex] };
+
+                // 交换按钮配置
+                targetConfigs[targetRowId][targetIndex] = srcButtonConfig;
+                srcConfigs[dragSrcRowId][srcIndex] = targetButtonConfig;
+
+                // 更新两行的预览
+                if (dragSrcIsSecondary) {
+                    updateSecondaryRowPreview(dragSrcRowId);
+                } else {
+                    updateRowPreview(dragSrcRowId);
+                }
+                
+                if (targetIsSecondary) {
+                    updateSecondaryRowPreview(targetRowId);
+                } else {
+                    updateRowPreview(targetRowId);
+                }
+
+                // 更新按钮ID
+                if (dragSrcIsSecondary) {
+                    updateSecondaryButtonIds(dragSrcRowId);
+                } else {
+                    updateButtonIds(dragSrcRowId);
+                }
+                
+                if (targetIsSecondary) {
+                    updateSecondaryButtonIds(targetRowId);
+                } else {
+                    updateButtonIds(targetRowId);
+                }
+            }
+
+            return false;
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            // 初始添加一行按钮到主工作台
+            addRow();
+            
+            // 初始添加一行按钮到副工作台
+            addSecondaryRow();
+        });
+    </script>
+</body>
+
+</html>
